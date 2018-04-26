@@ -1,5 +1,9 @@
+
+# on nersc
+# module load gsl
+
 # Uncomment to use GCC
-#CXX = g++
+CXX = g++
 
 # Uncomment to use Intel compiler
 #CXX = icpc
