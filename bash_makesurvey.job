@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --constraint=haswell
+#SBATCH --nodes=1
+#SBATCH --time=00:29:00
+#SBATCH --qos=debug
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=mr095415@ohio.edu
+module load gsl
+#
+# linear
+export CONFIG_FILE=mock1_ngc.param 
+export MOCK_IN=/global/cscratch1/sd/mehdi/mocks/test.dat  
+export RDZ_OUT=/global/cscratch1/sd/mehdi/mocks/testcat_3p5.dat
+srun -n 1 ./make_survey  $CONFIG_FILE  $MOCK_IN  $RDZ_OUT 
+
