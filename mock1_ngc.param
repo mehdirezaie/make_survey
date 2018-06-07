@@ -15,7 +15,10 @@ remap       1 1 0 , 0 0 1 , 1 0 0
 
 # what to add to the coordinates after remapping: X, Y, Z
 # optional: default does no translation
-translate  -2690.0, -350.0, -10.0
+#translate  -2690.0, -350.0, -10.0
+#translate  -3584.0, -350.0, -10.0 
+translate  -3000.0, -350.0, -10.0 
+
 
 # rotation of box around x-,y-,z-axis in degrees (excuted in that order)
 # optional: default does no rotation
@@ -28,7 +31,8 @@ pre_rotate  0 0 0
 
 # lbox: size of the input box in simulation units
 # REQUIRED!
-lbox  6900.0
+lbox  5274.0
+
 
 # omega_m, omega_l : the mass and lambda cosmology components
 # used for to convert comoving distance to redshift
@@ -55,7 +59,7 @@ redshift_space 0
 # min_redshift: defaults to 0.0
 # max_redshift: REQUIRED! (but not sanity checked)
 min_redshift 0.55
-max_redshift 3.5
+max_redshift 1.5
 
 # set the random seed (only used if output is randomly downsampled)
 # The value is an unsigned int, so sign does not matter as a negative
@@ -84,7 +88,7 @@ downsample_sky 0
 # values between points are spline interpolated, and any extrapolation
 # sets the fraction to zero (remove all objects).
 # optional: if not set no radial downsampling will occur
-# file_redshift_selection  cmass-dr10v5-ngc.zsel
+file_redshift_selection  /global/cscratch1/sd/mehdi/mocks/eboss-ngc-anand2017-scale1.zsel
 
 
 
